@@ -16,7 +16,8 @@ user name and password are there for the show and dont actually work
 </head>
 
 <body>
-    <form action="logged_in.html" method="post">
+    <!-- Login Page -->
+    <form action="#loggedin" method="post">
         <div id="usname">
             <label for="name">Enter Username:</label>
             <input type="text" name="name" id="name" placeholder="Username">
@@ -36,6 +37,36 @@ user name and password are there for the show and dont actually work
         </div>
     </form>
 
-</body>
+    <!-- Logged In Page -->
+    <div id="loggedin" style="display:none;">
+        <h1>Welcome to the library!</h1>
+        <h2>Pick a book among these:</h2>
+        <div>
+            <ol type="1">
+                <li>The Alchemist</li>
+                <li>Atomic Habits</li>
+                <li>Hitchhiker's guide to the galaxy</li>
+            </ol>
+        </div>
+        <br>
+        <form action="#selected" method="post">
+            <div>
+                <label for="books">Pick a book: </label>
+                <select name="books" id="books">
+                    <option value="The alchemist.">The Alchemist</option>
+                    <option value="Atomic Habits">Atomic Habits</option>
+                    <option value="HHGTTG">Hitchhiker's guide to the galaxy</option>
+                </select>
+                <input type="submit" name="sub" id="sub" value="submit">
+            </div>
+        </form>
+    </div>
 
+    <!-- Selected Book Page -->
+    <div id="selected" style="display:none;">
+        <h3>Go to this link to read The Alchemist.</h3>
+        <a href="https://www.amazon.in/Alchemist-Paulo-Coelho/dp/8172234988">The alchemist.</a>
+    </div>
+
+</body>
 </html>
